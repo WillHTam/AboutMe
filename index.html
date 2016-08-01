@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>About William</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="./favicon.ico">
+  <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  <META HTTP-EQUIV="Expires" CONTENT="-1">
+</head>
+  <body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+      <h1 class="miaou" id="title">{{name}}</h1>
+      <div class="miaou" id="deets">
+        <h3>Hi! My name is William, I was born on {{dob}} in Pasadena, California</h3>
+      </div>
+      <div class="miaou" id="desc">
+        <h3>Email me <a href="mailto:{{email}}">h e r e</a> || call me at {{phone}} ||
+          <div class="miaou" id="links">
+                <h4>Links to Me</h4>
+                <hr>
+                <ul>
+                  <li ng-repeat="lin in links">
+                    <a href="{{lin}}">{{linknames[$index]}}</a>
+                  </li>
+                </ul>
+              </div></h3>
+      </div>
+      <div class="miaou" id="kontakt">
+        <h3><span id="workie">{{work}}</span> Now === {{description}}!</h3>
+      </div>
+      <div class="miaou" id="educ">
+        <ul>
+          <li ng-repeat="edu in education">
+            <h3>{{edu}}</h3>
+          </li>
+        </ul>
+      </div>
+      <br><br>
+      <div id='techbox'>
+        <div class="miaou" id="skillz">
+          <h3>Skills</h3>
+          <hr>
+          <ul>
+            <li ng-repeat="ski in skills">
+              <h4>{{ski}}</h4>
+            </li>
+          </ul>
+        </div>
+        <div class="miaou" id="projects">
+          <h3>Favorite Projects</h3>
+          <hr>
+          <ul>
+            <li ng-repeat="pro in projects">
+              <a href="{{projectlinks[$index]}}">{{pro}}</a>
+            </li>
+          </ul>
+        </div>
+        <div class="miaou" id="info">
+          <hr>
+          <h4>This page utilizes AngularJS to help display content taken from an outside API</h4>
+          <hr>
+          <h4>The API is hosted on Heroku, and was built with NodeJS and Express.</h4>
+          <hr>
+          <h4>The data is stored with MongoDB</h4>
+          <hr>
+        </div>
+      </div>
+    <!-- END OF NG-APP DIV  -->
+    </div>
+    <script src="./app.js" charset="utf-8"></script>
+  </body>
+</html>
