@@ -3,8 +3,12 @@
 }
 
 body{
-  background-color: #070525;
-  color: rgba(238,238,238,0.8)
+  background-image: url('http://i.imgur.com/BjBQgH0.jpg');
+  color: rgba(250,250,250,0.8)
+}
+
+#ngapp{
+  background-color: rgba(7,5,37,0.9);
 }
 
 hr{
@@ -27,12 +31,11 @@ a:active{
   color: #ccd580;
 }
 
-
 .miaou{
   border: 0.5px solid #a3a840;
   margin: 40px;
   padding: 50px;
-  z-index: 0;
+  z-index: 2;
 }
 
 #desc{
