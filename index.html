@@ -12,12 +12,12 @@
 </head>
   <body>
     <div id="ngapp" ng-app="myApp" ng-controller="myCtrl">
-      <h1 class="miaou" id="title">{{name}}</h1>
+      <h2 class="miaou" id="title">{{name}}</h2>
       <div class="miaou" id="deets">
-        <h3>Hi! My name is William, I was born in Pasadena, California</h3>
+        <h4>Hi! My name is William, I was born in Pasadena, California</h4>
       </div>
       <div class="miaou" id="desc">
-        <h3>Email me <a href="mailto:{{email}}">h e r e</a> || call me at {{phone}} ||
+        <h4>Email me <a href="mailto:{{email}}">h e r e</a> || call me at {{phone}} ||
           <div class="miaou" id="links">
                 <h4>Links to Me</h4>
                 <hr>
@@ -26,22 +26,22 @@
                     <a href="{{lin}}">{{linknames[$index]}}</a>
                   </li>
                 </ul>
-              </div></h3>
+              </div></h4>
       </div>
       <div class="miaou" id="kontakt">
-        <h3><span id="workie">{{work}}</span> Now === {{description}}!</h3>
+        <h4><span id="workie">{{work}}</span> Now === {{description}}!</h4>
       </div>
       <div class="miaou" id="educ">
         <ul>
           <li ng-repeat="edu in education">
-            <h3>{{edu}}</h3>
+            <h4>{{edu}}</h4>
           </li>
         </ul>
       </div>
-      <br><br>
+      <br><br><br><br>
       <div id='techbox'>
         <div class="miaou" id="skillz">
-          <h3>Skills</h3>
+          <h4>Skills</h4>
           <hr>
           <ul>
             <li ng-repeat="ski in skills">
@@ -50,7 +50,7 @@
           </ul>
         </div>
         <div class="miaou" id="projects">
-          <h3>Favorite Projects</h3>
+          <h4>Favorite Projects</h4>
           <hr>
           <ul>
             <li ng-repeat="pro in projects">
