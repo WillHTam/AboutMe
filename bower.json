@@ -1,0 +1,24 @@
+{
+  "name": "aboutme",
+  "homepage": "https://github.com/WillHTam/AboutMe",
+  "authors": [
+    "William T <william.tam18@gmail.com>"
+  ],
+  "description": "about page",
+  "main": "app.js",
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-strap": "^2.3.9"
+  }
+}

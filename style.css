@@ -3,12 +3,17 @@
 }
 
 body{
-  background-image: url('http://i.imgur.com/BjBQgH0.jpg');
-  color: rgba(250,250,250,0.8)
+  background: url('http://i.imgur.com/QB5ELLq.jpg') top left no-repeat;
+  background-attachment: fixed;
+  color: rgba(250,250,250,0.8);
 }
 
 #ngapp{
-  background-color: rgba(7,5,37,0.9);
+}
+
+.img-filter{
+  -webkit-filter: grayscale(90%);
+  filter:grayscale(90%)
 }
 
 hr{
@@ -36,6 +41,7 @@ a:active{
   margin: 30px;
   padding: 20px;
   z-index: 2;
+  background-color: rgba(7,5,37,0.7);
 }
 
 #desc{
