@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WombatComp-1</title>
+        <link rel="shortcut icon" href="favicon2.ico">
+        <meta name="description" content="Javascript terminal emulator in AngularJS" />
+        <meta name="viewport" content="width=device-width">
+        <link href="src/wombat-terminal.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+        <link href="example/content/example.css" rel="stylesheet" />
+    </head>
+    <body ng-app="ng-terminal-example">
+        <section class="console-section">
+            <section class="container">
+
+                <div ng-controller="console" ng-show="theme == 'vintage'">
+                    <terminal terminal-class="vintage-terminal" terminal-config="vintage">
+                    </terminal>
+                </div>
+                <div ng-controller="console" ng-show="theme == 'modern'">
+                    <terminal>
+                    </terminal>
+                </div>
+            </section>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.js"></script>
+        <script src=example/ajax.js></script>
+        <script src="src/wombat-terminal.js"></script>
+        <script src="example/example.command.tools.js"></script>
+        <script src="example/example.js"></script>
+        <script src="example/example.command.implementations.js"></script>
+        <script src="example/example.command.filesystem.js"></script>
+    </body>
+</html>

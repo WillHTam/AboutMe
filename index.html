@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+	<meta charset="utf-8" />
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
+	<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.0.1.js"></script>
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<title>About William</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+	<META HTTP-EQUIV="Expires" CONTENT="-1">
+</head>
+
+<body ng-controller="myCtrl">
+	<script type="text/ng-template" id="myModalContent.html" style="margin-top: 200px;">
+		<div class="modal-header" style="color: black;">
+			<h3 class="modal-title" style="color: black;">About</h3>
+		</div>
+		<div class="modal-body" style="color: black;">
+			An API built with NodeJS and Express. Allows for all CRUD actions for resources and users. Protected routes use user authentication. Upon user creation, passwords are hashed for security.  Storage of resources and users is done with MongoDB.
+		</div>
+	</script>
+
+	<header>
+		<h1>{{name}}</h1>
+		<p>{{description}}</p>
+	</header>
+
+	<div class="container">
+		<!-- Introduction-->
+		<section class="center">
+			<h1>Welcome!</h1>
+			<hr>
+			<p>
+				Hi, my name is William. This website's all about me.
+				Email me anytime   <a href="mailto:william.tam18@gmail.com">here</a>.
+				See my skills <a href="#skillz">here</a>
+			</p>
+			<hr>
+			<p>
+				If you're a fellow developer, perhaps you'd like to slip into something <a href="./terminal.html">more comfortable?</a>
+			</p>
+		</section>
+
+		<hr>
+
+		<!-- Gallery Block-->
+		<section class="gallery">
+			<h1 class="center">Gallery</h1>
+			<div class="row" id="gall">
+				<a href="http://www.github.com/willhtam" uib-popover="My GitHub Profile" popover-trigger="'mouseenter'"><img src="img/octocat.png" class="grid-2"></a>
+				<a uib-popover-html="htmlPopover1" popover-trigger="'mouseenter'" href="https://willhtam.github.io/Stash/login"><img src="img/stash.png" class="grid-2"></a>
+				<a uib-popover-html="htmlPopover2" popover-trigger="'mouseenter'" a href="https://freeflow-startup.herokuapp.com/cospaces.html"><img src="img/free.png" class="grid-2"></a>
+				<a href="https://willhtam.github.io/MiniProject3A/" uib-popover-html="htmlPopover3" popover-trigger="'mouseenter'"><img src="https://avatars1.githubusercontent.com/u/251374?v=3&s=200" class="grid-2"></a>
+				<a href="https://collab-draw.herokuapp.com/" uib-popover-html="htmlPopover4" popover-trigger="'mouseenter'"><img src="img/num.png" class="grid-2"></a>
+				<a href="#" uib-popover-html="htmlPopover5" popover-trigger="'mouseenter'"><img src="img/ruby.png" class="grid-2"></a>
+			</div>
+		</section>
+
+		<hr>
+
+	<!-- Spotlight -->
+	<section class="spotlight">
+		<div class="container">
+			<div class="row">
+				<div class="grid-3">
+					<img src="img/stash.png">
+				</div>
+				<div class="grid-3">
+					<h1>Stash Backend</h1>
+					<p>Something that I'm quite proud of</p>
+					<a ng-click="open('lg')">View Project</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="skillz">
+		<!--List of skills-->
+		<div class="row">
+			<div class="grid-2">
+				<h1>Skills</h1>
+				<ul>
+					<li ng-repeat="ski in skills">
+						<p>{{ski}}</p>
+					</li>
+				</ul>
+			</div>
+
+			<div class="grid-4">
+				<h4>Education</h4>
+				<ul>
+					<li ng-repeat="edu in education">
+						<p>{{edu}}</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<!-- New container-->
+	<div class="container">
+
+		<hr>
+
+		<!--Experience Tables-->
+		<section class="experience">
+			<div class="row">
+				<h2>Previous Work</h2>
+				<div class="grid-2">
+					<h2>{{work}}</h2>
+					<p>2012-2016</p>
+				</div>
+				<div class="grid-4">
+					<ul id="desc">
+						<li><p>I found working in finance to be quite dull and monotonous.</p></li>
+						<li><p>With programming, there are always new challenges and frontiers to explore.</p></li>
+						<li><p>I also love the collaborative spirit of the coding community. Some of my projects featured here were done in a group, and some weren't. But all of them were made possible with the advice and assistance of my friends and colleagues.</p></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<!--Footer-->
+		<footer class="center" id="footie">
+			<hr>
+			<span>&copy; This website was made in AngularJS, and connects to a NodeJS API on Heroku.</span>
+		</footer>
+
+	</div><!-- End Container -->
+	<script src="./app.js" charset="utf-8"></script>
+</body>
+</html>
