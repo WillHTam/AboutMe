@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
 <head>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
 	<meta charset="utf-8" />
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
-	<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.0.1.js"></script>
-	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-	<title>About William</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+	<script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.0.1.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<title>William T</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<link href='http://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="style.css" type="text/css" />
 	<link rel="shortcut icon" href="img/favicon.ico">
 	<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
@@ -16,12 +21,28 @@
 </head>
 
 <body ng-controller="myCtrl">
-	<script type="text/ng-template" id="myModalContent.html" style="margin-top: 200px;">
-		<div class="modal-header" style="color: black;">
-			<h3 class="modal-title" style="color: black;">About</h3>
+	<script type="text/ng-template" id="myModalContent.html">
+		<div class="modal-header">
+			<h3 class="modal-title blacken">About</h3>
 		</div>
-		<div class="modal-body" style="color: black;">
-			An API built with NodeJS and Express. Allows for all CRUD actions for resources and users. Protected routes use user authentication. Upon user creation, passwords are hashed for security.  Storage of resources and users is done with MongoDB.
+		<div class="modal-body">
+			<h3 class="blacken">Server API</h3>
+			<a href="https://github.com/WillHTam/stash-project3server">GitHub Repo</a><br>
+			<a href="https://project3pockety.herokuapp.com/">API Frontpage</a><br>
+			<p class="blacken">
+				An API built with NodeJS and Express and hosted on Heroku. Allows for all CRUD actions for resources and users. Protected routes use user authentication. Upon user creation, passwords are hashed for security.  Storage of resources and users is done with MongoDB.
+			</p>
+			<h3 class="blacken">Client App</h3>
+			<a href="https://github.com/WillHTam/Stash">GitHub Repo</a><br>
+			<a href="https://willhtam.github.io/Stash/login">Login Page with Register in Upper-Left</a>
+			<p class="blacken">
+				Front-end client application which makes an AJAX call to the Stash API and presents the data already styled for the user.
+			</p>
+			<h3 class="blacken">Firefox Extension</h3><br>
+			<a href="https://github.com/WillHTam/Stasher-Project3Extension">GitHub Repo</a>
+			<p class="blacken">
+				Instead of laboriously copy and pasting a url, use this Firefox add-on to instantly add the current page to your list of saved pages. Works by making an AJAX call to the server and sending the url of the current tab. Try it by installing the .xpi file in the repo.
+			</p>
 		</div>
 	</script>
 
@@ -41,7 +62,7 @@
 				See my skills <a href="#skillz">here</a>
 			</p>
 			<hr>
-			<p>
+			<p id="terminal">
 				If you're a fellow developer, perhaps you'd like to slip into something <a href="./terminal.html">more comfortable?</a>
 			</p>
 		</section>
@@ -71,8 +92,8 @@
 					<img src="img/stash.png">
 				</div>
 				<div class="grid-3">
-					<h1>Stash Backend</h1>
-					<p>Something that I'm quite proud of</p>
+					<h1>Stash Full Stack</h1>
+					<p>A culmination of many skills. A backend built with NodeJS, a Front-end built with Materialize, and a Firefox Extension to complement them both.</p>
 					<a ng-click="open('lg')">View Project</a>
 				</div>
 			</div>
@@ -94,7 +115,7 @@
 			<div class="grid-4">
 				<h4>Education</h4>
 				<ul>
-					<li ng-repeat="edu in education">
+					<li ng-repeat="edu in items">
 						<p>{{edu}}</p>
 					</li>
 				</ul>
