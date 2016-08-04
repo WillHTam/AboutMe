@@ -61,6 +61,10 @@ a {
   text-decoration: none;
 }
 
+.whiten{
+  color: white !important;
+}
+
 a:focus,
 a:hover {
   color: #6594e0;
