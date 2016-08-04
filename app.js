@@ -1,4 +1,4 @@
-angular.module('myApp', ['ngAnimate', 'ui.bootstrap']);
+angular.module('myApp', ['ngAnimate', 'ui.bootstrap', 'ngMaterial']);
 angular.module('myApp').controller('myCtrl', function ($scope, $uibModal, $log, $http, $sce) {
 
   $http.get("https://myapi299.herokuapp.com/")
@@ -7,7 +7,7 @@ angular.module('myApp').controller('myCtrl', function ($scope, $uibModal, $log, 
     $scope.dob = response.data[0].dob
     $scope.work = response.data[0].work
     $scope.description = response.data[0].description
-    $scope.education = response.data[0].education
+    $scope.items = response.data[0].education
     $scope.projects = response.data[0].projects
     $scope.projectlinks = response.data[0].projectlinks
     $scope.email = response.data[0].email
