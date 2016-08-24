@@ -27,21 +27,21 @@
 		</div>
 		<div class="modal-body">
 			<h3 class="blacken">Server API</h3>
-			<a class="embiggen" href="https://github.com/WillHTam/stash-project3server">GitHub Repo</a><br>
-			<a class="embiggen" href="https://project3pockety.herokuapp.com/">API Frontpage</a><br>
+			<a class="embiggen" href="https://github.com/WillHTam/Thrifty-server">GitHub Repo</a><br>
+			<a class="embiggen" href="https://thrifty-app.herokuapp.com/">API Frontpage</a><br>
 			<p class="blacken">
 				An API built with NodeJS and Express and hosted on Heroku. Allows for all CRUD actions for resources and users. Protected routes use user authentication. Upon user creation, passwords are hashed for security.  Storage of resources and users is done with MongoDB.
 			</p>
 			<h3 class="blacken">Client App</h3>
-			<a class="embiggen" href="https://github.com/WillHTam/Stash">GitHub Repo</a><br>
-			<a class="embiggen" href="https://willhtam.github.io/Stash/login">Login Page with Register in Upper-Left</a>
+			<a class="embiggen" href="https://github.com/WillHTam/Thrifty-client">GitHub Repo</a><br>
+			<a class="embiggen" href="http://get-thrifty.herokuapp.com">Front Page here</a>
 			<p class="blacken">
-				Front-end client application which makes an AJAX call to the Stash API and presents the data already styled for the user.
+				Front-end client application which lets you set a goal and budget for it accordingly. Try it out by making an account!
 			</p>
-			<h3 class="blacken">Firefox Extension</h3>
-			<a class="embiggen" href="https://github.com/WillHTam/Stasher-Project3Extension">GitHub Repo</a>
+			<h3 class="blacken">Android / iPhone App</h3>
+			<a class="embiggen" href="https://github.com/WillHTam/Thrifty-app">GitHub Repo</a>
 			<p class="blacken">
-				Instead of laboriously copy and pasting a url, use this Firefox add-on to instantly add the current page to your list of saved pages. Works by making an AJAX call to the server and sending the url of the current tab. Try it by installing the .xpi file in the repo.
+				A phone application made with Angular JS and Ionic Framework so you can see your goals on the go.
 			</p>
 		</div>
 	</script>
@@ -66,10 +66,25 @@
 		</section>
 
 		<hr>
+		<!-- Spotlight -->
+		<section class="spotlight">
+			<div class="container">
+				<div class="row">
+					<div class="grid-3">
+						<img src="https://i.imgur.com/aY8GrEm.png">
+					</div>
+					<div class="grid-3">
+						<h1>Thrifty</h1>
+						<p>A culmination of many skills. A backend built with NodeJS & Express, a Front-end built with Angular 1, Angular Material, and Angular Route. Connects with a phone app I made in Ionic Framework.</p><br>
+						<a class="whiten" ng-click="open('lg')">View Project</a>
+					</div>
+				</div>
+			</div>
+		</section>
 
 		<!-- Gallery Block-->
 		<section class="gallery">
-			<h1 class="center">Gallery</h1>
+			<h1 class="center">My Other Favorite Projects</h1>
 			<div class="row" id="gall">
 				<a href="http://www.github.com/willhtam" uib-popover="My GitHub Profile" popover-trigger="'mouseenter'"><img src="img/octocat.png" class="grid-2"></a>
 				<a uib-popover-html="htmlPopover1" popover-trigger="'mouseenter'" href="https://willhtam.github.io/Stash/login"><img src="img/stash.png" class="grid-2"></a>
@@ -82,21 +97,6 @@
 
 		<hr>
 
-	<!-- Spotlight -->
-	<section class="spotlight">
-		<div class="container">
-			<div class="row">
-				<div class="grid-3">
-					<img src="img/stash.png">
-				</div>
-				<div class="grid-3">
-					<h1>Stash Full Stack</h1>
-					<p>A culmination of many skills. A backend built with NodeJS, a Front-end built with Materialize, and a Firefox Extension to complement them both.</p><br>
-					<a class="whiten" ng-click="open('lg')">View Project</a>
-				</div>
-			</div>
-		</div>
-	</section>
 
 	<section id="skillz">
 		<!--List of skills-->
@@ -143,6 +143,15 @@
 				</div>
 			</div>
 		</section>
+
+		<hr>
+<h2>Contact Me with Any Questions or Comments</h2>
+<form action="https://formspree.io/william.tam18@gmail.com" method="POST">
+		<input type="text" placeholder="Name" name="name">
+		<input id="questionbox" type="email" placeholder="E-mail" name="_replyto">
+		<input type="submit" placeholder="Send">
+</form>
+
 
 		<!--Footer-->
 		<footer class="center" id="footie">
